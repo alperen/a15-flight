@@ -11,6 +11,7 @@ const twigCompiler = require('gulp-twig');
 const del = require('del');
 const sassLinter = require('gulp-scss-lint');
 const webserver = require('gulp-webserver');
+const {argv} = require('yargs');
 
 sass.compiler = require('node-sass');
 const runTimestamp = Math.round(Date.now() / 1000);
@@ -20,6 +21,7 @@ const config = (() => {
     const dest = './dest';
     const node_modules = './node_modules/';
     const twigVariablesPath = path.join(__dirname, src, './twig', 'variables.js');
+    const twigOrReact = argv.twigOrReact && ['twig','react'].includes(argv.twigOrReact) ? argv.twigOrReact : 'twig';
     return {
         src: {
             sass: path.join(src, './sass', '/**/main.{sass,scss}'),
@@ -56,7 +58,8 @@ const config = (() => {
             open:true,
             livereload:{enable:true},
             fallback: 'index.html',
-        }
+        },
+        twigOrReact
     }
 })();
 
@@ -113,6 +116,6 @@ task('watch', (cb) => {
     cb();
 });
 
-task('bootstrap',series(['twig', 'sass', 'images', 'iconfont', 'webserver']));
+task('bootstrap',series([config.twigOrReact, 'sass', 'images', 'iconfont', 'webserver']));
 
 exports.default = series(['clean', 'bootstrap','watch']);
