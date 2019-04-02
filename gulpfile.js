@@ -10,6 +10,7 @@ const debug = require('gulp-debug');
 const twigCompiler = require('gulp-twig');
 const del = require('del');
 const sassLinter = require('gulp-scss-lint');
+const webserver = require('gulp-webserver');
 
 sass.compiler = require('node-sass');
 const runTimestamp = Math.round(Date.now() / 1000);
@@ -50,7 +51,12 @@ const config = (() => {
             data: require(twigVariablesPath) || {},
             twigVariablesPath
         },
-        sassLinter: {}
+        sassLinter: {},
+        webserver:{
+            open:true,
+            livereload:{enable:true},
+            fallback: 'index.html',
+        }
     }
 })();
 
@@ -94,6 +100,10 @@ task('clean', () => {
     ]);
 });
 
+task('webserver',() => {
+    return src(config.dest.dest)
+           .pipe(webserver((config.webserver || {})))
+});
 
 task('watch', (cb) => {
     watch(config.src.twig[0], series(['twig']));
@@ -102,9 +112,7 @@ task('watch', (cb) => {
     watch(config.src.iconfonts, series(['iconfont']));
     cb();
 });
-task('bootstrap',(cb) => {
-    series(['twig', 'sass', 'images', 'iconfont']);
-    console.warn('Files are watching now.');
-    cb();
-});
-exports.default = series(['clean', 'bootstrap', 'watch']);
+
+task('bootstrap',series(['twig', 'sass', 'images', 'iconfont', 'webserver']));
+
+exports.default = series(['clean', 'bootstrap','watch']);

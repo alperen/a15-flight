@@ -21,6 +21,7 @@
     "gulp-sass": "^4.0.2",
     "gulp-scss-lint": "^1.0.0",
     "gulp-twig": "^1.2.0",
+    "gulp-webserver": "^0.9.1",
     "node-sass": "^4.11.0"
   }
 }
