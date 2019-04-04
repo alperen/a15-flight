@@ -11,6 +11,7 @@ const twigCompiler = require('gulp-twig');
 const del = require('del');
 const sassLinter = require('gulp-scss-lint');
 const webserver = require('gulp-webserver');
+const exec = require('gulp-exec');
 const {argv} = require('yargs');
 
 sass.compiler = require('node-sass');
@@ -21,7 +22,6 @@ const config = (() => {
     const dest = './dest';
     const node_modules = './node_modules/';
     const twigVariablesPath = path.join(__dirname, src, './twig', 'variables.js');
-    const twigOrReact = argv.twigOrReact && ['twig','react'].includes(argv.twigOrReact) ? argv.twigOrReact : 'twig';
     return {
         src: {
             sass: path.join(src, './sass', '/**/main.{sass,scss}'),
@@ -31,6 +31,7 @@ const config = (() => {
                 path.join(src, './twig', '/**/*.twig'),
                 '!' + path.join(src, './twig', '/_**/**/*.*'),
             ],
+            react: path.join(src,'./react','./**/*'),
             src,
         },
         dest: {
@@ -58,8 +59,7 @@ const config = (() => {
             open:true,
             livereload:{enable:true},
             fallback: 'index.html',
-        },
-        twigOrReact
+        }
     }
 })();
 
@@ -108,14 +108,20 @@ task('webserver',() => {
            .pipe(webserver((config.webserver || {})))
 });
 
-task('watch', (cb) => {
-    watch(config.src.twig[0], series(['twig']));
-    watch(config.src.sass, series(['sass', 'sass:lint']));
-    watch(config.src.images, series(['images']));
-    watch(config.src.iconfonts, series(['iconfont']));
+task('webpack',(cb) => {
+    exec('yarn webpack');
     cb();
 });
 
-task('bootstrap',series([config.twigOrReact, 'sass', 'images', 'iconfont', 'webserver']));
+task('watch', (cb) => {
+    watch(config.src.twig[0], series(['twig']));
+   // watch(config.src.react, series(['webpack']));
+    watch(config.src.sass, series(['sass', 'sass:lint']));
+    watch(config.src.images, series(['images']));
+   // watch(config.src.iconfonts, series(['iconfont']));
+    cb();
+});
+
+task('bootstrap',series(['twig', 'sass', 'images', 'webserver']));
 
 exports.default = series(['clean', 'bootstrap','watch']);
