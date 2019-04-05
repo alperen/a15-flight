@@ -15,6 +15,7 @@
     "babel-loader": "^8.0.5",
     "bootstrap": "^4.3.1",
     "del": "^4.1.0",
+    "eslint": "^5.16.0",
     "gulp": "^4.0.0",
     "gulp-clean-css": "^4.0.0",
     "gulp-concat": "^2.6.1",

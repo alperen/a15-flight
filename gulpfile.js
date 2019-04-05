@@ -1,4 +1,4 @@
-const { task, src, dest, series, pipe, watch } = require('gulp');
+const { task, src, dest, series, watch } = require('gulp');
 const path = require('path');
 let sass = require('gulp-sass');
 const concat = require('gulp-concat');
@@ -6,16 +6,13 @@ const cleanCSS = require('gulp-clean-css');
 const replace = require('gulp-replace');
 const imageOptimization = require('gulp-imagemin');
 const iconfont = require('gulp-iconfont');
-const debug = require('gulp-debug');
 const twigCompiler = require('gulp-twig');
 const del = require('del');
 const sassLinter = require('gulp-scss-lint');
 const webserver = require('gulp-webserver');
 const exec = require('gulp-exec');
-const {argv} = require('yargs');
 
 sass.compiler = require('node-sass');
-const runTimestamp = Math.round(Date.now() / 1000);
 
 const config = (() => {
     const src = './src';
