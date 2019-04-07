@@ -1,0 +1,34 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2019 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="account" unicode="&#xe800;" d="M500 683a167 167 0 1 0 0-333 167 167 0 0 0 0 333z m0-416c184 0 333-75 333-167v-83h-666v83c0 92 149 167 333 167z" horiz-adv-x="1000" />
+
+<glyph glyph-name="airplane" unicode="&#xe801;" d="M875 183v84l-333 208v229a63 63 0 1 1-125 0v-229l-334-208v-84l334 105v-230l-84-62v-63l146 42 146-42v63l-83 62v230l333-105z" horiz-adv-x="1000" />
+
+<glyph glyph-name="airplane_takeoff" unicode="&#xe802;" d="M104 58h792v-83h-792v83z m816 390c-9 34-44 54-77 45l-221-60-288 268-80-21 172-299-207-55-82 64-60-16 76-132 32-55 66 18 222 59 181 48 221 59c34 10 53 44 45 77z" horiz-adv-x="1000" />
+
+<glyph glyph-name="airplane_landing" unicode="&#xe803;" d="M104 58h792v-83h-792v83z m299 239l182-48 221-59c33-9 67 10 77 44 8 33-11 67-45 76l-221 60-115 375-80 22v-345l-207 55-39 97-61 16v-215l67-18 221-60z" horiz-adv-x="1000" />
+
+<glyph glyph-name="calendar_text" unicode="&#xe804;" d="M583 267h-291v-84h291m209-125h-584v459h584m0 208h-42v83h-83v-83h-334v83h-83v-83h-42c-46 0-83-37-83-83l0-584a83 83 0 0 1 83-83h584c46 0 83 38 83 83v584c0 46-37 83-83 83z m-84-292h-416v-83h416v83z" horiz-adv-x="1000" />
+
+<glyph glyph-name="chevron_left" unicode="&#xe805;" d="M642 159l-191 191 191 191-59 59-250-250 250-250 59 59z" horiz-adv-x="1000" />
+
+<glyph glyph-name="chevron_right" unicode="&#xe806;" d="M358 159l191 191-191 191 59 59 250-250-250-250-59 59z" horiz-adv-x="1000" />
+
+<glyph glyph-name="credit_card" unicode="&#xe807;" d="M833 517h-666v83h666m0-500h-666v250h666m0 333h-666a83 83 0 0 1-83-83l-1-500c0-46 38-83 84-83h666a83 83 0 0 1 84 83v500a83 83 0 0 1-84 83z" horiz-adv-x="1000" />
+
+<glyph glyph-name="magnify" unicode="&#xe809;" d="M396 725a271 271 0 0 0 206-447l11-11h33l208-209-62-62-209 208v33l-11 12a271 271 0 1 0-176 476z m0-83a188 188 0 1 1 0-375 188 188 0 0 1 0 375z" horiz-adv-x="1000" />
+
+<glyph glyph-name="menu_left" unicode="&#xe80a;" d="M583 558l-208-208 208-208v416z" horiz-adv-x="1000" />
+
+<glyph glyph-name="menu_right" unicode="&#xe80b;" d="M417 142l208 208-208 208v-416z" horiz-adv-x="1000" />
+
+<glyph glyph-name="seat_recline_extra" unicode="&#xe80c;" d="M223 615a84 84 0 0 0-20 116 84 84 0 0 0 116 21 84 84 0 0 0 20-117 84 84 0 0 0-116-20z m444-557h-295a125 125 0 0 0-123 106l-82 394h-83l82-406a209 209 0 0 1 207-177h294m9 250h-203l-43 171c66-37 137-64 215-51v89c-68-13-144 11-196 52l-68 53a91 91 0 0 1-32 16 91 91 0 0 1-41 2h-1a94 94 0 0 1-76-109l56-246a125 125 0 0 1 123-102h285l159-125 63 63" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>
