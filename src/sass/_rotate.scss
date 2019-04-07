@@ -1,0 +1,8 @@
+$degrees: 90deg,-90deg;
+
+@each $degree in $degrees {
+    .rotate-#{$degree}{
+        transform: rotate($degree);
+        display: block;
+    }
+}

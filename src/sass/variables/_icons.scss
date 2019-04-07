@@ -1,0 +1,40 @@
+$version: random(42000);
+$font-name: icons;
+$font-file-name: "icons";
+$font-folder: "fonts/icons";
+$font-weight: 400;
+$font-style: normal;
+
+// scss-lint:disable all
+$icons: ("account": "E001", "airplane": "E002", "airplane_landing": "E003", "airplane_takeoff": "E004", "calendar_text": "E005", "chevron_left": "E006", "chevron_right": "E007", "credit_card": "E008", "logo": "E009", "magnify": "E00A", "menu_left": "E00B", "menu_right": "E00C", "seat_recline_extra": "E00D");
+// scss-lint:enable all
+
+@font-face {
+  font-family: #{$font-name};
+  font-weight: #{$font-weight};
+  font-style: #{$font-style};
+  src: url("#{$font-folder}/#{$font-file-name}.woff2?v=#{$version}")
+      format("woff2"),
+    url("#{$font-folder}/#{$font-file-name}.woff?v=#{$version}") format("woff"),
+    url("#{$font-folder}/#{$font-file-name}.ttf?v=#{$version}")
+      format("truetype");
+}
+
+.icon {
+  display: inline-block;
+  font: normal normal normal 14px/1 #{$font-name};
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  @each $filename, $codepoint in $icons {
+    $code: "\"\\#{$codepoint}\"";
+
+    &-#{$filename}::before {
+      content: unquote($code);
+    }
+  }
+}
+
+// scss-lint:disable FinalNewline

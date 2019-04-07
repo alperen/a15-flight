@@ -1,0 +1,16 @@
+
+@import './colours.scss';
+@import './overrides.scss';
+@import '~/bootstrap/scss/bootstrap.scss';
+@import '~/rfs/scss';
+@import './consts.scss';
+@import './components/index.scss';
+@import './rotate.scss';
+@import './text.scss';
+@import './font.scss';
+
+.dot{
+    color:$geyser;
+    font-size:24px;
+    user-select: none;
+}

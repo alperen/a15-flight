@@ -1,0 +1,44 @@
+.c{
+
+    &_footer{
+        margin-top:90px;
+        background: $white;
+        min-height:304px;
+
+        .container{
+            padding-top:47px;
+
+            .copyright-text{
+                padding-top:24px;
+            }
+            
+            .icon-logo{
+                font-size:36px;
+                cursor: pointer;
+                color:$bay-of-many;
+            }
+
+            .heading{
+                font-size:16px;
+                font-family: AvertaStdSemibold;
+                color:$bay-of-many;
+            }
+
+            ul{
+                margin-top:24px;
+                margin-top: 24px;
+                list-style: none;
+                margin-left: 0;
+                padding-left: 0;
+
+                li{
+                    padding-bottom:16px;
+                    
+                    a{
+                        color:$gullGray;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,33 @@
+.c{
+    &_search-bar{
+        min-height: 72px;
+        background: $white;
+
+        .bar-btn{
+            height:72px;
+        }
+    
+        .section{
+            border:2px solid $lilac;
+            border-bottom:0;
+            border-top:0;
+            border-right:0;
+
+            &:nth-last-child(1){
+                border-right: 2px !important;
+            }
+
+            .icon{
+                color:$gullGray;
+                position: relative;
+                top: 4px;
+            }
+
+            span{
+                font-size:14px;
+                font-family: AvertaStdSemibold;
+                color:$gullGray;
+            }
+        }
+    }
+}

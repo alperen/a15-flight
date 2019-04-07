@@ -1,0 +1,27 @@
+@font-face {
+    font-family: AvertaStd;
+    src: url("../fonts/AvertaStd-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: AvertaStdSemibold;
+    src: url("../fonts/AvertaStd-Semibold.otf") format("opentype");
+}
+
+$sizes: 48px, 16px, 14px, 24px,40px;
+$families: (
+    normal: AvertaStd,
+    semibold: AvertaStdSemibold
+);
+
+@each $size in $sizes{
+    .font-size-#{$size}{
+        @include responsive-font-size($size,true);
+    }
+}
+
+@each $key, $family in $families{
+    .font-family-#{$key}{
+        font-family: $family;
+    }
+}

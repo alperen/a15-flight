@@ -1,0 +1,45 @@
+.c{
+
+    &_btn{
+        background-color: $casablanca;
+        height:48px;
+        border-radius: 24px;
+        font-size:14px;
+        font-family:AvertaStdSemibold;
+        color:$white;
+        padding-left:24px;
+        padding-right:24px;
+        padding-top:14px;
+        padding-bottom:14px;
+        user-select: none;
+
+        &:hover{
+            color:$white;
+            text-decoration: none;
+        }
+        
+        .icon{
+            padding-left:30px;
+        }
+
+        &.bg-gullGray{
+            background:$gullGray;
+        }
+
+        &.bg-blue{
+            background:$bay-of-many;
+        }
+
+        &.flight-card-btn{
+            height:36px;
+            padding-bottom: 8px;
+            padding-top:8px;
+            
+            &.position-fix{
+                position: relative;
+                top: -3px;
+            }
+        }
+        
+    }
+}

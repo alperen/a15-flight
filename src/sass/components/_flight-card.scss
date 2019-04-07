@@ -1,0 +1,60 @@
+.c{
+
+    &_flight-card{
+        min-height: 186px;
+        background-color: $white;
+        padding-left:32px;
+        padding-top:27px;
+        padding-right:32px;
+        padding-bottom:27px;
+        margin:8px auto;
+
+        .price{
+            margin-right: 24px;
+        }
+
+        .dotted-line{
+            border:2px dotted $catskill;
+            margin:18px 0;
+        }
+
+        .details{
+
+            div{
+
+                &:nth-last-child(2),
+                &:nth-last-child(1){
+
+                    span{
+                        font-size:16px;
+                        word-wrap: none;
+                    }
+                }
+            }
+        }
+
+        .see-detail{
+
+            .icon{
+                color:$gullGray !important;
+                cursor: pointer;
+                font-size:24px;
+                position: relative;
+                left: -20px;
+            }
+        }
+
+        .flight-direction{
+            position: absolute;
+            margin-top: -38px;
+            margin-left: 60px;
+
+            i{
+                font-size: 16px;
+                position: relative;
+                top:2px;
+                color:$bay-of-many;
+            }
+        }
+    }
+}

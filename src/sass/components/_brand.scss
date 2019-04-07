@@ -1,0 +1,35 @@
+.c{
+    &_brand{
+        background-image: linear-gradient($bay-of-many, $biscay);
+        height: 416px;
+        
+
+        .amount-text{
+            margin-top:20px;
+            opacity: 0.5;
+        }
+
+        .destination{
+            margin-bottom:16px;
+            
+            .icon-airplane{
+                position: relative;
+                top: 3px;
+            }
+        }
+
+        .information{
+    
+            .dot{
+                padding-left:6px;
+                padding-right:6px;
+                position: relative;
+                top:1px;
+            }
+        }
+
+        .amount{
+            margin-bottom:28px;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.c{
+    &_menu-items{
+        
+        a{
+            margin-right:42px;
+            
+            &:nth-last-child(1){
+                margin-right:0;
+            }
+        }
+    }
+}
