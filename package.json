@@ -6,7 +6,8 @@
   "license": "MIT",
   "dependencies": {
     "gulp-cli": "^2.1.0",
-    "gulp-debug": "^4.0.0"
+    "gulp-debug": "^4.0.0",
+    "rfs": "^8.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",
@@ -21,6 +22,7 @@
     "gulp-concat": "^2.6.1",
     "gulp-exec": "^3.0.2",
     "gulp-iconfont": "^10.0.2",
+    "gulp-iconfont-css": "^3.0.0",
     "gulp-image-optimization": "^0.1.3",
     "gulp-imagemin": "^5.0.3",
     "gulp-replace": "^1.0.0",
