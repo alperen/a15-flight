@@ -113,7 +113,7 @@ task('webpack',(cb) => {
 task('watch', (cb) => {
     watch(config.src.twig[0], series(['twig']));
    // watch(config.src.react, series(['webpack']));
-    watch(config.src.sass, series(['sass', 'sass:lint']));
+    watch(config.src.sass, series(['sass']));
     watch(config.src.images, series(['images']));
    // watch(config.src.iconfonts, series(['iconfont']));
     cb();
@@ -121,4 +121,4 @@ task('watch', (cb) => {
 
 task('bootstrap',series(['twig', 'sass', 'images', 'webserver']));
 
-exports.default = series(['clean', 'bootstrap','watch']);
+exports.default = series(['bootstrap','watch']);
